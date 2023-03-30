@@ -49,6 +49,8 @@ Let the tests, and naming of things be your guide 😄
 Note: If typescript, or your linter is failing you are failing too! If you see red in your sidebar FIX IT!!!!!
 ![DONT LET THIS HAPPEN BEFORE YOU SUBMIT](images/Screen%20Shot%202023-02-25%20at%2012.56.27%20PM.png)
 
+If you would like to check whether or not your types are all passing you can run `npm run check-types`
+
 ### DO NOT USE ANY!!!!
 
 If there is a spot where you think you may need the flexibility of any, use a generic, or an unknown instead.

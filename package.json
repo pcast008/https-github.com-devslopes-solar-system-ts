@@ -4,6 +4,7 @@
   "description": "this is a great way to practice array applicatives in js",
   "main": "index.js",
   "scripts": {
+    "check-types": "tsc --noEmit",
     "test-all": "vitest --run",
     "test-0": "vitest --run e0-example.",
     "test-1": "vitest --run e1.",
