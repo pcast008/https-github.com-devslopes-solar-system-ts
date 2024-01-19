@@ -1,3 +1,11 @@
-export const minBy = (array, cb) => {};
+export const minBy = <T, N>(array: T[], cb: (value: T) => N) => {
+  return array.length !== 0
+    ? array.reduce((acc, curr) => (cb(acc) <= cb(curr) ? acc : curr))
+    : undefined;
+};
 
-export function maxBy(array, cb) {}
+export function maxBy<T, N>(array: T[], cb: (value: T) => N) {
+  return array.length !== 0
+    ? array.reduce((acc, curr) => (cb(acc) >= cb(curr) ? acc : curr))
+    : undefined;
+}

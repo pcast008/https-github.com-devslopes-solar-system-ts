@@ -3,7 +3,27 @@
 // Return example: 1902
 // Hint: use a Map data structure instead of an object if you want typescript to be happy
 
-export function getGreatestDiscoveryYear(asteroids) {}
+import { Asteroid } from "../data/data";
+
+export function getGreatestDiscoveryYear(asteroids: Asteroid[]) {
+  let max = 0;
+  let maxYear = 0;
+
+  asteroids.reduce((acc, curr) => {
+    const year = curr.discoveryYear;
+
+    acc.has(year) ? acc.set(year, acc.get(year) + 1) : acc.set(year, 1);
+
+    if (acc.get(year) > max) {
+      max = acc.get(year);
+      maxYear = year;
+    }
+
+    return acc;
+  }, new Map());
+
+  return maxYear;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
